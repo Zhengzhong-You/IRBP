@@ -1,0 +1,92 @@
+{
+  "name": "bottleneck_tight",
+  "nodes": [
+    {
+      "yard": true,
+      "tracks": 1,
+      "handling_capacity": 100,
+      "handling_cost": 0
+    },
+    {
+      "yard": false,
+      "tracks": 0,
+      "handling_capacity": 0,
+      "handling_cost": 0
+    },
+    {
+      "yard": true,
+      "tracks": 1,
+      "handling_capacity": 100,
+      "handling_cost": 0
+    }
+  ],
+  "link_capacities": [
+    4,
+    10,
+    4,
+    10,
+    1
+  ],
+  "arcs": [
+    {
+      "from": 0,
+      "to": 1,
+      "link": 0,
+      "length": 1,
+      "cost": 5
+    },
+    {
+      "from": 0,
+      "to": 1,
+      "link": 1,
+      "length": 3,
+      "cost": 0
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "link": 2,
+      "length": 1,
+      "cost": 5
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "link": 3,
+      "length": 3,
+      "cost": 0
+    },
+    {
+      "from": 0,
+      "to": 2,
+      "link": 4,
+      "length": 5,
+      "cost": 0
+    }
+  ],
+  "blocks": [
+    {
+      "from": 0,
+      "to": 2,
+      "slots": 1,
+      "lower": 1,
+      "upper": 10,
+      "length_limit": 5,
+      "opening": 2,
+      "interchange": 0,
+      "transport_factor": 1
+    }
+  ],
+  "demands": [
+    {
+      "from": 0,
+      "to": 2,
+      "quantity": 10,
+      "penalty": 10,
+      "blocks": [
+        0
+      ]
+    }
+  ],
+  "_copyright": "Copyright (c) 2026 Zhengzhong (Ricky) You. All rights reserved. Software: RouteOpt. Application: IRBP."
+}

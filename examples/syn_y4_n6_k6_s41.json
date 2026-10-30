@@ -1,0 +1,437 @@
+{
+  "name": "syn_y4_n6_k6_s41",
+  "nodes": [
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 24,
+      "handling_cost": 1
+    },
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 23,
+      "handling_cost": 1
+    },
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 21,
+      "handling_cost": 1
+    },
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 20,
+      "handling_cost": 1
+    },
+    {
+      "yard": false,
+      "tracks": 0,
+      "handling_capacity": 0,
+      "handling_cost": 0
+    },
+    {
+      "yard": false,
+      "tracks": 0,
+      "handling_capacity": 0,
+      "handling_cost": 0
+    }
+  ],
+  "link_capacities": [
+    22,
+    21,
+    12,
+    12,
+    14,
+    19,
+    14,
+    16,
+    13
+  ],
+  "arcs": [
+    {
+      "from": 0,
+      "to": 1,
+      "link": 0,
+      "length": 1,
+      "cost": 1.388
+    },
+    {
+      "from": 1,
+      "to": 0,
+      "link": 0,
+      "length": 1,
+      "cost": 1.233
+    },
+    {
+      "from": 0,
+      "to": 4,
+      "link": 1,
+      "length": 3,
+      "cost": 2.616
+    },
+    {
+      "from": 4,
+      "to": 0,
+      "link": 1,
+      "length": 3,
+      "cost": 3.126
+    },
+    {
+      "from": 0,
+      "to": 5,
+      "link": 2,
+      "length": 4,
+      "cost": 3.755
+    },
+    {
+      "from": 5,
+      "to": 0,
+      "link": 2,
+      "length": 4,
+      "cost": 3.219
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "link": 3,
+      "length": 1,
+      "cost": 1.489
+    },
+    {
+      "from": 2,
+      "to": 1,
+      "link": 3,
+      "length": 1,
+      "cost": 1.78
+    },
+    {
+      "from": 1,
+      "to": 3,
+      "link": 4,
+      "length": 1,
+      "cost": 1.118
+    },
+    {
+      "from": 3,
+      "to": 1,
+      "link": 4,
+      "length": 1,
+      "cost": 1.42
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "link": 5,
+      "length": 5,
+      "cost": 4.182
+    },
+    {
+      "from": 3,
+      "to": 2,
+      "link": 5,
+      "length": 5,
+      "cost": 4.888
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "link": 6,
+      "length": 1,
+      "cost": 1.199
+    },
+    {
+      "from": 4,
+      "to": 2,
+      "link": 6,
+      "length": 1,
+      "cost": 0.907
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "link": 7,
+      "length": 1,
+      "cost": 0.822
+    },
+    {
+      "from": 4,
+      "to": 3,
+      "link": 7,
+      "length": 1,
+      "cost": 1.456
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "link": 8,
+      "length": 4,
+      "cost": 3.222
+    },
+    {
+      "from": 5,
+      "to": 4,
+      "link": 8,
+      "length": 4,
+      "cost": 3.335
+    }
+  ],
+  "blocks": [
+    {
+      "to": 1,
+      "slots": 1,
+      "lower": 3,
+      "upper": 44,
+      "length_limit": 2.7,
+      "opening": 17,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 0
+    },
+    {
+      "to": 2,
+      "slots": 1,
+      "lower": 7,
+      "upper": 44,
+      "length_limit": 4.4,
+      "opening": 14,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 0
+    },
+    {
+      "to": 3,
+      "slots": 1,
+      "lower": 7,
+      "upper": 44,
+      "length_limit": 4.4,
+      "opening": 21,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 0
+    },
+    {
+      "to": 0,
+      "slots": 1,
+      "lower": 3,
+      "upper": 44,
+      "length_limit": 2.7,
+      "opening": 11,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 1
+    },
+    {
+      "to": 2,
+      "slots": 1,
+      "lower": 4,
+      "upper": 44,
+      "length_limit": 2.7,
+      "opening": 14,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 1
+    },
+    {
+      "to": 3,
+      "slots": 1,
+      "lower": 5,
+      "upper": 44,
+      "length_limit": 2.7,
+      "opening": 19,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 1
+    },
+    {
+      "to": 0,
+      "slots": 1,
+      "lower": 6,
+      "upper": 44,
+      "length_limit": 4.4,
+      "opening": 18,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 2
+    },
+    {
+      "to": 1,
+      "slots": 1,
+      "lower": 6,
+      "upper": 44,
+      "length_limit": 2.7,
+      "opening": 20,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 2
+    },
+    {
+      "to": 3,
+      "slots": 1,
+      "lower": 6,
+      "upper": 44,
+      "length_limit": 4.4,
+      "opening": 9,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 2
+    },
+    {
+      "to": 0,
+      "slots": 1,
+      "lower": 5,
+      "upper": 44,
+      "length_limit": 4.4,
+      "opening": 16,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 3
+    },
+    {
+      "to": 1,
+      "slots": 1,
+      "lower": 4,
+      "upper": 44,
+      "length_limit": 2.7,
+      "opening": 22,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 3
+    },
+    {
+      "to": 2,
+      "slots": 1,
+      "lower": 4,
+      "upper": 44,
+      "length_limit": 4.4,
+      "opening": 12,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 3
+    }
+  ],
+  "demands": [
+    {
+      "from": 3,
+      "to": 2,
+      "quantity": 8,
+      "penalty": 31,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "quantity": 5,
+      "penalty": 25,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "from": 3,
+      "to": 1,
+      "quantity": 6,
+      "penalty": 27,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "from": 0,
+      "to": 2,
+      "quantity": 5,
+      "penalty": 36,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "from": 0,
+      "to": 2,
+      "quantity": 10,
+      "penalty": 27,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "from": 3,
+      "to": 2,
+      "quantity": 10,
+      "penalty": 36,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  ],
+  "seed": 41
+}

@@ -1,0 +1,112 @@
+{
+  "name": "parallel_blocks",
+  "nodes": [
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 20,
+      "handling_cost": 1
+    },
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 20,
+      "handling_cost": 1
+    },
+    {
+      "yard": false,
+      "tracks": 0,
+      "handling_capacity": 0,
+      "handling_cost": 0
+    },
+    {
+      "yard": false,
+      "tracks": 0,
+      "handling_capacity": 0,
+      "handling_cost": 0
+    }
+  ],
+  "link_capacities": [
+    6,
+    6,
+    6,
+    6
+  ],
+  "arcs": [
+    {
+      "from": 0,
+      "to": 2,
+      "link": 0,
+      "length": 1,
+      "cost": 0.5
+    },
+    {
+      "from": 2,
+      "to": 1,
+      "link": 1,
+      "length": 1,
+      "cost": 0.5
+    },
+    {
+      "from": 0,
+      "to": 3,
+      "link": 2,
+      "length": 1,
+      "cost": 0.5
+    },
+    {
+      "from": 3,
+      "to": 1,
+      "link": 3,
+      "length": 1,
+      "cost": 0.5
+    }
+  ],
+  "blocks": [
+    {
+      "to": 1,
+      "slots": 1,
+      "lower": 4,
+      "upper": 12,
+      "length_limit": 2,
+      "opening": 2,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 0
+    },
+    {
+      "to": 1,
+      "slots": 1,
+      "lower": 4,
+      "upper": 12,
+      "length_limit": 2,
+      "opening": 2,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 0
+    }
+  ],
+  "demands": [
+    {
+      "from": 0,
+      "to": 1,
+      "quantity": 6,
+      "penalty": 10,
+      "blocks": [
+        0,
+        1
+      ]
+    },
+    {
+      "from": 0,
+      "to": 1,
+      "quantity": 6,
+      "penalty": 10,
+      "blocks": [
+        0,
+        1
+      ]
+    }
+  ],
+  "expected": 16
+}

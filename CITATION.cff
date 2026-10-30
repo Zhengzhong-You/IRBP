@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software or these instances, please cite the paper below."
+title: "IRBP: code and instances for integrated railroad blocking"
+authors:
+  - family-names: Xu
+    given-names: Yida
+  - family-names: You
+    given-names: Zhengzhong Ricky
+  - family-names: Mo
+    given-names: Baichuan
+license: GPL-3.0
+repository-code: "https://github.com/Zhengzhong-You/IRBP"
+preferred-citation:
+  type: article
+  title: "A Dual-Guided Column-Generation-Based Matheuristic for Integrated Railroad Blocking"
+  authors:
+    - family-names: Xu
+      given-names: Yida
+    - family-names: You
+      given-names: Zhengzhong Ricky
+    - family-names: Mo
+      given-names: Baichuan
+  journal: "Transportation Science"
+  year: 2026
+  notes: "Submitted"

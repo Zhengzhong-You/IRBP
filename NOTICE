@@ -1,0 +1,15 @@
+IRBP
+Copyright (c) 2026 Zhengzhong (Ricky) You. All rights reserved.
+Licensed under the GNU General Public License v3.0 (see LICENSE).
+
+Third-party components
+- third_party/routeopt: RouteOpt solver interface and branching helpers.
+  Copyright (c) 2025 Zhengzhong (Ricky) You. License: GPL-3.0 (third_party/routeopt/LICENSE).
+  Source: https://github.com/Zhengzhong-You/RouteOpt
+- third_party/nlohmann: JSON for Modern C++ by Niels Lohmann. License: MIT (third_party/nlohmann/LICENSE.MIT).
+- third_party/miniz: miniz 3.0.2 (https://github.com/richgel999/miniz). License: MIT (third_party/miniz/LICENSE).
+- generator/instance_generator.py adapts the topology components of GenCAT
+  (https://github.com/seijimaekawa/GenCAT, Maekawa et al. 2023) and imports NEMtropy
+  (Vallarano et al. 2021) as a library; see the module docstring.
+
+Not distributed: Gurobi binaries and licenses, and the data of the 2026 INFORMS RAS Problem Solving Competition.

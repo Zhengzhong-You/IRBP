@@ -1,0 +1,54 @@
+{
+  "name": "partial_service",
+  "nodes": [
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 20,
+      "handling_cost": 1
+    },
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 20,
+      "handling_cost": 1
+    }
+  ],
+  "link_capacities": [
+    6
+  ],
+  "arcs": [
+    {
+      "from": 0,
+      "to": 1,
+      "link": 0,
+      "length": 1,
+      "cost": 1
+    }
+  ],
+  "blocks": [
+    {
+      "to": 1,
+      "slots": 1,
+      "lower": 3,
+      "upper": 10,
+      "length_limit": 1,
+      "opening": 2,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 0
+    }
+  ],
+  "demands": [
+    {
+      "from": 0,
+      "to": 1,
+      "quantity": 10,
+      "penalty": 5,
+      "blocks": [
+        0
+      ]
+    }
+  ],
+  "expected": 28
+}

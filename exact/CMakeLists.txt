@@ -1,0 +1,48 @@
+# Copyright (c) 2026 Zhengzhong (Ricky) You. All rights reserved.
+# Software: RouteOpt. Application: IRBP.
+# Benchmarks: compact ARC model (LP and MIP) and the Dantzig-Wolfe LP by column generation.
+find_path(BOOST_INCLUDE_DIR boost/math/special_functions/gamma.hpp
+  HINTS "$ENV{BOOST_ROOT}" "$ENV{BOOST_ROOT}/include" /opt/homebrew/include /usr/local/include /usr/include)
+if(NOT BOOST_INCLUDE_DIR)
+  message(FATAL_ERROR "Boost headers not found: set BOOST_ROOT, or configure with -DIRBP_BUILD_EXACT=OFF")
+endif()
+add_library(routeopt_branching STATIC ${IRBP_THIRD_PARTY}/routeopt/src/bkf_get_k.cpp
+  ${IRBP_THIRD_PARTY}/routeopt/src/bkf_update.cpp ${IRBP_THIRD_PARTY}/routeopt/src/helper_bkf.cpp)
+target_include_directories(routeopt_branching PUBLIC ${IRBP_THIRD_PARTY}/routeopt/include ${BOOST_INCLUDE_DIR})
+add_library(irbp_exact_core STATIC src/problem.cpp src/pricing.cpp src/arc.cpp src/bpc.cpp src/single_cg.cpp src/single_cg_solver.cpp)
+target_include_directories(irbp_exact_core PUBLIC include ${IRBP_THIRD_PARTY})
+target_link_libraries(irbp_exact_core PUBLIC routeopt_solver routeopt_branching Threads::Threads)
+if(MSVC)
+  target_compile_definitions(irbp_exact_core PUBLIC NOMINMAX)
+endif()
+add_executable(irbp_exact src/main.cpp)
+target_link_libraries(irbp_exact PRIVATE irbp_exact_core)
+if(WIN32)
+  target_include_directories(irbp_exact PRIVATE compat/win)
+  target_link_libraries(irbp_exact PRIVATE psapi)
+endif()
+
+if(BUILD_TESTING)
+  foreach(test_name IN ITEMS single_heuristic single_exact single_cg model_copy solution_pool pricing_batch
+                             branching pricing parallel cuts candidate_pool physical_shortcut)
+    add_executable(exact_${test_name}_test tests/${test_name}_test.cpp)
+    target_link_libraries(exact_${test_name}_test PRIVATE irbp_exact_core)
+  endforeach()
+  add_test(NAME exact_single_cg_incumbent_search COMMAND exact_single_heuristic_test "${CMAKE_CURRENT_SOURCE_DIR}/tests/data/single_cg_bottleneck.json")
+  add_test(NAME exact_single_cg_tree COMMAND exact_single_exact_test "${IRBP_EXAMPLES}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/data/single_cg_bottleneck.json")
+  add_test(NAME exact_single_cg_capacity_pricing COMMAND exact_single_cg_test)
+  add_test(NAME exact_model_copy_parameters COMMAND exact_model_copy_test)
+  add_test(NAME exact_solution_pool_index COMMAND exact_solution_pool_test)
+  add_test(NAME exact_pricing_batch COMMAND exact_pricing_batch_test "${IRBP_EXAMPLES}")
+  add_test(NAME exact_branching_strategies COMMAND exact_branching_test "${IRBP_EXAMPLES}")
+  add_test(NAME exact_pricing_exactness COMMAND exact_pricing_test)
+  add_test(NAME exact_pricing_workers COMMAND exact_parallel_test)
+  add_test(NAME exact_flow_cover_validity COMMAND exact_cuts_test)
+  add_test(NAME exact_candidate_pool COMMAND exact_candidate_pool_test)
+  add_test(NAME exact_physical_shortcut COMMAND exact_physical_shortcut_test)
+  add_test(NAME exact_solver_interface_boundary COMMAND ${CMAKE_COMMAND} -DSOURCE_ROOT=${CMAKE_CURRENT_SOURCE_DIR}
+           -P ${PROJECT_SOURCE_DIR}/cmake/solver_boundary_test.cmake)
+  set_tests_properties(exact_single_cg_tree PROPERTIES TIMEOUT 180)
+  set_tests_properties(exact_single_cg_capacity_pricing exact_branching_strategies PROPERTIES TIMEOUT 120)
+  set_tests_properties(exact_pricing_exactness PROPERTIES TIMEOUT 60)
+endif()

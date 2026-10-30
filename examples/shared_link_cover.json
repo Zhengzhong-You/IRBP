@@ -1,0 +1,81 @@
+{
+  "name": "shared_link_cover",
+  "nodes": [
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 20,
+      "handling_cost": 1
+    },
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 20,
+      "handling_cost": 1
+    }
+  ],
+  "link_capacities": [
+    10
+  ],
+  "arcs": [
+    {
+      "from": 0,
+      "to": 1,
+      "link": 0,
+      "length": 1,
+      "cost": 1
+    },
+    {
+      "from": 1,
+      "to": 0,
+      "link": 0,
+      "length": 1,
+      "cost": 1
+    }
+  ],
+  "blocks": [
+    {
+      "to": 1,
+      "slots": 1,
+      "lower": 6,
+      "upper": 8,
+      "length_limit": 1,
+      "opening": 2,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 0
+    },
+    {
+      "to": 0,
+      "slots": 1,
+      "lower": 6,
+      "upper": 8,
+      "length_limit": 1,
+      "opening": 2,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 1
+    }
+  ],
+  "demands": [
+    {
+      "from": 0,
+      "to": 1,
+      "quantity": 8,
+      "penalty": 10,
+      "blocks": [
+        0
+      ]
+    },
+    {
+      "from": 1,
+      "to": 0,
+      "quantity": 8,
+      "penalty": 9,
+      "blocks": [
+        1
+      ]
+    }
+  ],
+  "expected": 82
+}

@@ -1,0 +1,23 @@
+# Copyright (c) 2026 Zhengzhong (Ricky) You. All rights reserved.
+# Software: RouteOpt. Application: IRBP.
+# Experiment drivers. Each includes the DG-CGM kernel heuristic/src/local_search.cpp unchanged.
+set(IRBP_KERNEL_DIR "${PROJECT_SOURCE_DIR}/heuristic/src")
+add_executable(ts_harness harness/ts_harness.cpp)
+target_include_directories(ts_harness PRIVATE "${IRBP_KERNEL_DIR}")
+target_link_libraries(ts_harness PRIVATE irbp_core)
+foreach(target IN ITEMS post_c0 post_c0_test)
+  add_executable(${target} adapters/post_c0.cpp)
+  target_include_directories(${target} PRIVATE "${IRBP_KERNEL_DIR}")
+  target_link_libraries(${target} PRIVATE irbp_core)
+endforeach()
+target_compile_definitions(post_c0_test PRIVATE POST_C0_TEST)
+foreach(target IN ITEMS pg_criteria pg_criteria_test)
+  add_executable(${target} pg_criteria/pg_criteria.cpp)
+  target_include_directories(${target} PRIVATE "${IRBP_KERNEL_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/adapters")
+  target_link_libraries(${target} PRIVATE irbp_core)
+endforeach()
+target_compile_definitions(pg_criteria_test PRIVATE POOL_MECHANISM_TEST)
+if(BUILD_TESTING)
+  add_test(NAME post_construction_restore COMMAND post_c0_test)
+  add_test(NAME pg_criteria_mechanism COMMAND pg_criteria_test)
+endif()

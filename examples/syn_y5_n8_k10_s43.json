@@ -1,0 +1,742 @@
+{
+  "name": "syn_y5_n8_k10_s43",
+  "nodes": [
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 18,
+      "handling_cost": 1
+    },
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 22,
+      "handling_cost": 1
+    },
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 20,
+      "handling_cost": 1
+    },
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 25,
+      "handling_cost": 1
+    },
+    {
+      "yard": true,
+      "tracks": 2,
+      "handling_capacity": 23,
+      "handling_cost": 1
+    },
+    {
+      "yard": false,
+      "tracks": 0,
+      "handling_capacity": 0,
+      "handling_cost": 0
+    },
+    {
+      "yard": false,
+      "tracks": 0,
+      "handling_capacity": 0,
+      "handling_cost": 0
+    },
+    {
+      "yard": false,
+      "tracks": 0,
+      "handling_capacity": 0,
+      "handling_cost": 0
+    }
+  ],
+  "link_capacities": [
+    11,
+    17,
+    14,
+    19,
+    14,
+    11,
+    11,
+    15,
+    12,
+    19,
+    11,
+    14
+  ],
+  "arcs": [
+    {
+      "from": 0,
+      "to": 1,
+      "link": 0,
+      "length": 1,
+      "cost": 1.176
+    },
+    {
+      "from": 1,
+      "to": 0,
+      "link": 0,
+      "length": 1,
+      "cost": 0.896
+    },
+    {
+      "from": 0,
+      "to": 2,
+      "link": 1,
+      "length": 5,
+      "cost": 4.129
+    },
+    {
+      "from": 2,
+      "to": 0,
+      "link": 1,
+      "length": 5,
+      "cost": 4.387
+    },
+    {
+      "from": 0,
+      "to": 4,
+      "link": 2,
+      "length": 5,
+      "cost": 4.575
+    },
+    {
+      "from": 4,
+      "to": 0,
+      "link": 2,
+      "length": 5,
+      "cost": 4.377
+    },
+    {
+      "from": 0,
+      "to": 7,
+      "link": 3,
+      "length": 1,
+      "cost": 0.861
+    },
+    {
+      "from": 7,
+      "to": 0,
+      "link": 3,
+      "length": 1,
+      "cost": 1.742
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "link": 4,
+      "length": 2,
+      "cost": 1.875
+    },
+    {
+      "from": 2,
+      "to": 1,
+      "link": 4,
+      "length": 2,
+      "cost": 1.677
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "link": 5,
+      "length": 5,
+      "cost": 4.988
+    },
+    {
+      "from": 3,
+      "to": 2,
+      "link": 5,
+      "length": 5,
+      "cost": 4.814
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "link": 6,
+      "length": 1,
+      "cost": 1.645
+    },
+    {
+      "from": 4,
+      "to": 3,
+      "link": 6,
+      "length": 1,
+      "cost": 1.257
+    },
+    {
+      "from": 3,
+      "to": 6,
+      "link": 7,
+      "length": 3,
+      "cost": 2.929
+    },
+    {
+      "from": 6,
+      "to": 3,
+      "link": 7,
+      "length": 3,
+      "cost": 3.101
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "link": 8,
+      "length": 2,
+      "cost": 2.448
+    },
+    {
+      "from": 5,
+      "to": 4,
+      "link": 8,
+      "length": 2,
+      "cost": 2.381
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "link": 9,
+      "length": 1,
+      "cost": 1.068
+    },
+    {
+      "from": 6,
+      "to": 4,
+      "link": 9,
+      "length": 1,
+      "cost": 1.528
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "link": 10,
+      "length": 5,
+      "cost": 4.969
+    },
+    {
+      "from": 6,
+      "to": 5,
+      "link": 10,
+      "length": 5,
+      "cost": 4.552
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "link": 11,
+      "length": 1,
+      "cost": 1.295
+    },
+    {
+      "from": 7,
+      "to": 6,
+      "link": 11,
+      "length": 1,
+      "cost": 1.579
+    }
+  ],
+  "blocks": [
+    {
+      "to": 1,
+      "slots": 1,
+      "lower": 3,
+      "upper": 80,
+      "length_limit": 2.7,
+      "opening": 9,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 0
+    },
+    {
+      "to": 2,
+      "slots": 1,
+      "lower": 4,
+      "upper": 80,
+      "length_limit": 6.1,
+      "opening": 21,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 0
+    },
+    {
+      "to": 3,
+      "slots": 1,
+      "lower": 6,
+      "upper": 80,
+      "length_limit": 7.8,
+      "opening": 11,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 0
+    },
+    {
+      "to": 4,
+      "slots": 1,
+      "lower": 7,
+      "upper": 80,
+      "length_limit": 6.1,
+      "opening": 14,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 0
+    },
+    {
+      "to": 0,
+      "slots": 1,
+      "lower": 5,
+      "upper": 80,
+      "length_limit": 2.7,
+      "opening": 17,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 1
+    },
+    {
+      "to": 2,
+      "slots": 1,
+      "lower": 7,
+      "upper": 80,
+      "length_limit": 4.4,
+      "opening": 14,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 1
+    },
+    {
+      "to": 3,
+      "slots": 1,
+      "lower": 5,
+      "upper": 80,
+      "length_limit": 9.5,
+      "opening": 14,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 1
+    },
+    {
+      "to": 4,
+      "slots": 1,
+      "lower": 5,
+      "upper": 80,
+      "length_limit": 7.8,
+      "opening": 8,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 1
+    },
+    {
+      "to": 0,
+      "slots": 1,
+      "lower": 4,
+      "upper": 80,
+      "length_limit": 6.1,
+      "opening": 16,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 2
+    },
+    {
+      "to": 1,
+      "slots": 1,
+      "lower": 4,
+      "upper": 80,
+      "length_limit": 4.4,
+      "opening": 20,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 2
+    },
+    {
+      "to": 3,
+      "slots": 1,
+      "lower": 4,
+      "upper": 80,
+      "length_limit": 9.5,
+      "opening": 19,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 2
+    },
+    {
+      "to": 4,
+      "slots": 1,
+      "lower": 3,
+      "upper": 80,
+      "length_limit": 11.2,
+      "opening": 18,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 2
+    },
+    {
+      "to": 0,
+      "slots": 1,
+      "lower": 4,
+      "upper": 80,
+      "length_limit": 7.8,
+      "opening": 12,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 3
+    },
+    {
+      "to": 1,
+      "slots": 1,
+      "lower": 4,
+      "upper": 80,
+      "length_limit": 9.5,
+      "opening": 13,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 3
+    },
+    {
+      "to": 2,
+      "slots": 1,
+      "lower": 4,
+      "upper": 80,
+      "length_limit": 9.5,
+      "opening": 20,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 3
+    },
+    {
+      "to": 4,
+      "slots": 1,
+      "lower": 4,
+      "upper": 80,
+      "length_limit": 2.7,
+      "opening": 14,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 3
+    },
+    {
+      "to": 0,
+      "slots": 1,
+      "lower": 6,
+      "upper": 80,
+      "length_limit": 6.1,
+      "opening": 11,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 4
+    },
+    {
+      "to": 1,
+      "slots": 1,
+      "lower": 3,
+      "upper": 80,
+      "length_limit": 7.8,
+      "opening": 15,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 4
+    },
+    {
+      "to": 2,
+      "slots": 1,
+      "lower": 7,
+      "upper": 80,
+      "length_limit": 11.2,
+      "opening": 8,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 4
+    },
+    {
+      "to": 3,
+      "slots": 1,
+      "lower": 3,
+      "upper": 80,
+      "length_limit": 2.7,
+      "opening": 8,
+      "interchange": 0,
+      "transport_factor": 1,
+      "from": 4
+    }
+  ],
+  "demands": [
+    {
+      "from": 2,
+      "to": 3,
+      "quantity": 5,
+      "penalty": 32,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "from": 3,
+      "to": 0,
+      "quantity": 7,
+      "penalty": 27,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "from": 0,
+      "to": 1,
+      "quantity": 9,
+      "penalty": 37,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "from": 2,
+      "to": 0,
+      "quantity": 10,
+      "penalty": 33,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "quantity": 9,
+      "penalty": 25,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "from": 1,
+      "to": 0,
+      "quantity": 5,
+      "penalty": 37,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "from": 0,
+      "to": 1,
+      "quantity": 10,
+      "penalty": 25,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "from": 2,
+      "to": 0,
+      "quantity": 10,
+      "penalty": 33,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "from": 3,
+      "to": 2,
+      "quantity": 10,
+      "penalty": 32,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "quantity": 5,
+      "penalty": 36,
+      "blocks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    }
+  ],
+  "seed": 43
+}
