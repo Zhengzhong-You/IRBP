@@ -1,0 +1,15 @@
+name: Question or proposal
+description: Ask about the method, reproduction, or a focused improvement.
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question or proposed improvement
+      description: Explain the use case and the relevant method, dataset, or documentation.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and evidence
+      description: Add the commit, command, configuration, or a small example if relevant. Do not share restricted data.

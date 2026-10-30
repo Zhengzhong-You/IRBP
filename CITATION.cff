@@ -1,6 +1,15 @@
 cff-version: 1.2.0
 message: "If you use this software or these instances, please cite the paper below."
 title: "IRBP: code and instances for integrated railroad blocking"
+abstract: "Research code, generated instances, and computational results for integrated railroad blocking using DG-CGM, compact ARC optimization, and Dantzig-Wolfe column generation."
+keywords:
+  - railroad blocking
+  - operations research
+  - matheuristics
+  - column generation
+  - mixed-integer programming
+  - freight transportation
+url: "https://github.com/Zhengzhong-You/IRBP"
 authors:
   - family-names: Xu
     given-names: Yida

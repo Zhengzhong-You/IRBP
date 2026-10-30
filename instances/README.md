@@ -5,7 +5,9 @@
 | N50, N100, N150 | 50, 100, 150 | 12 | 50 each | `small/` |
 | N150K24, N150K48, N300K48, N600K48 | 150, 150, 300, 600 | 24, 48, 48, 48 | 10 each | `larger/` |
 
-A file name gives the set and the random seed of the generator, for example `small/n100-s2026102348.json`. `manifest.csv` lists the size and SHA-256 of every file, and `sampling.csv` lists every seed that was drawn, in ascending order, with the reason a draw was not retained (an invalid draw or a network whose largest component is smaller than the target). No draw was discarded because of its computational results. The first ten N100 seeds were drawn in an earlier run whose rejected draws were not recorded; the two instances retained from that run are listed.
+A file name gives the set and the random seed of the generator, for example `small/n100-s2026102348.json`. `manifest.csv` lists the network dimensions and SHA-256 of every instance, and `sampling.csv` lists the recorded seed draws, in ascending order, with the reason a draw was not retained (an invalid draw or a network whose largest component is smaller than the target). No draw was discarded because of its computational results. The first ten N100 seeds were drawn in an earlier run whose rejected draws were not recorded; the two instances retained from that run are listed.
+
+Run `python3 scripts/check_repository.py` from the repository root to check all instance hashes and dimensions against the manifest. This check does not require Gurobi.
 
 ## Format
 

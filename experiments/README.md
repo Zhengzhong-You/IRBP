@@ -36,6 +36,10 @@ All generated-instance runs of DG-CGM use one solver thread. The ARC and DW benc
 | Larger generated instances | `ts_harness` with a 300 s limit (arms `Full`, `NoPG`, `NoLocal`, `NoJoint`, `ConstructionOnly`; seeds 1 to 3 for `Full`); `irbp_exact` DW LP, ARC LP, ARC MIP; pool-only variants | `results/larger/*.csv` |
 | RAS: construction and complete search, demand scenarios, cost components | `irbp` with variants `RAS`, `RAS_seed2`, `RAS_seed3` and `ALPHA` in 0.5, 1, 2 | `results/ras/dgcgm_main.csv` |
 | RAS: search components | `post_c0 ... capture`, then `post_c0 ... continue` from the same C0 (time limit as in Section 6.4.2) with variants `RAS`, `RAS_NoPG`, `RAS_NoLocal`, `RAS_NoJoint`, `RAS_PoolJ_Full`, `RAS_PoolJ_NoPG` | `results/ras/dgcgm_components.csv`, `dgcgm_pool_only_joint.csv` |
-| RAS: resource limits and the joint-repair cap | `irbp` on inputs written by `ras/make_resource_scenarios.py`; variants `RAS_joint100`, `RAS_joint500` | `results/ras/resource_limits.csv` |
+| RAS: resource limits and the joint-repair cap | `irbp` on separately prepared resource-scenario inputs; variants `RAS_joint100`, `RAS_joint500` (see scope below) | `results/ras/resource_limits.csv` |
 
-The RAS inputs are converted from the competition data set, which is not redistributed (see the top-level README).
+## RAS data and reproduction scope
+
+The RAS inputs are converted from the competition data set, which is not redistributed. The commands above require compatible converted inputs obtained separately. The resource-scenario preparation script used for `results/ras/resource_limits.csv` is not included in the public tree. Consequently, the resource-scenario study cannot yet be reproduced from this repository alone, even with the raw competition data. Its archived CSV results remain available for inspection.
+
+The supplied generated JSON instances and experiment configurations are available directly in this repository. Use the published manifest to identify the input, and record the source commit, solver version, threads, time limit, and generated configuration with any rerun. Raw wall-clock timings depend on the machine and workload; preserve the measured values when comparing runs.
